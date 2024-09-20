@@ -1,0 +1,154 @@
+.dialog-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(0.5rem);
+}
+
+.dialog-content {
+  background-color: white;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 10px 30px rgba(16, 24, 40, 0.18);
+  position: fixed;
+
+  padding: 2rem;
+  border-radius: 1rem;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  @media (min-width: 640px) {
+    left: 50%;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: black;
+}
+
+.space-y-8 > * + * {
+  margin-top: 2rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.gap-2 > * + * {
+  margin-top: 0.5rem;
+}
+
+.gap-4 > * + * {
+  margin-left: 1rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.border {
+  border: 1px solid #D7DDE9;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-close {
+  background-color: #E7EEFB;
+}
+
+.w-close {
+  width: 450px;
+}
+
+.shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.text-black {
+  color: black;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+.ml-auto {
+  margin-left: auto;
+}
+
+.description {
+  color: rgb(0 0 0 / 0.55);
+  margin:16px 0;
+}
+
+.dialog-content__container-buttons {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @media (min-width: 640px) {
+    flex-direction: row;
+  }
+
+  align-items: center;
+  gap: 1rem; // Assuming gap-4 is 1rem, adjust as necessary
+}
+
+.dialog-content__close-button {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; // 4 units in tailwind is 1rem
+    
+    @media (min-width: 640px) {
+      flex-direction: row;
+      width: 450px;
+    }
+  
+    width: 100%;
+    padding: 1rem; // 6 units in tailwind is 1.5rem
+    border-radius: 0.5rem; //  rounded-lg in tailwind
+    background-color: #E7EEFB;
+    color: black;
+    font-weight: 500; // font-medium in tailwind
+}
+
+.dialog-content__delete-button {
+  width: 100%;
+  padding: 1rem 1.5rem; // px-6 py-4
+  border-radius: 0.5rem; // rounded-lg
+  background: linear-gradient(to right, #D30707, #F05353); // bg-gradient-to-r from-[#D30707] to-[#F05353]
+  color: white; // text-white
+  font-weight: 500; // font-medium
+
+  @media (min-width: 640px) { // sm:w-[450px]
+    width: 450px;
+  }
+}
